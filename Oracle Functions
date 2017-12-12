@@ -1,0 +1,25 @@
+create or replace
+FUNCTION leapyearornot1(
+      p_date IN NUMBER)
+    RETURN VARCHAR2
+  IS
+  BEGIN
+    IF mod(p_date,4)=0 THEN
+      RETURN 'leapyear';
+    ELSE
+      RETURN 'not leap year';
+    END IF;
+  END;
+  ======================================================
+  create or replace
+function factorial(i in number)
+  return number
+  is
+  begin
+  if i=1 then
+  return i;
+  else
+  return i*factorial(i-1);
+  end if;
+  end;
+  
